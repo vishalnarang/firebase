@@ -1,0 +1,75 @@
+<app-popup header="View Organisation Details" [modalType]="modalType.LARGE" *ngIf="details">
+    <div body>
+        <div class="container-fluid row">
+            <div class="from-group col-sm-6">
+                <label class="heading-l2">Organisation Name</label>
+                <p>{{details.organisationName || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Organisation Link</label>
+                <p>{{details.organisationLink || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Address</label>
+                <p>{{details.address || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Category Name</label>
+                <p>{{details.categoryName || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Donate Link</label>
+                <p>{{details.donateLink || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Email</label>
+                <p>{{details.email || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Organisation Phone</label>
+                <p>{{details.organisationPhone || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Twitter</label>
+                <p>{{details.twitter || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Facebook</label>
+                <p>{{details.facebook || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Instagram</label>
+                <p>{{details.instagram || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Youtube</label>
+                <p>{{details.youtube || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Verified</label>
+                <p>{{details.hasVerified ? 'Yes': 'No' || '-'}}</p>
+            </div>
+            <div class="from-group col-6">
+                <label class="heading-l2">Awarded</label>
+                <p>{{details.hasAward ? 'Yes': 'No' || '-'}}</p>
+            </div>
+            <div class="from-group col-6" *ngIf="details.hasAward">
+                <label>Awarded</label>
+                <p>{{details.awardDetails || '-'}}</p>
+            </div>
+            <div class="from-group col-12">
+                <label class="heading-l2">Short Description</label>
+                <p>{{details.shortDescription || '-'}}</p>
+            </div>
+            <div class="from-group col-12">
+                <label class="heading-l2">Long Description</label>
+                <p>{{details.longDescription || '-'}}</p>
+            </div>
+        </div>
+    </div>
+    <div footer>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary button-color" (click)="close()">Cancel</button>
+        </div>
+    </div>
+</app-popup>

@@ -1,0 +1,78 @@
+$color-primary: var(--blue);
+$color-secondary: var(--black);
+$color-tertiary: var(--gray);
+$color-section: #f5f6f7;
+
+$color-blue: var(--blue);
+$color-red: var(--red);
+$color-graph-label: var(--graph-label);
+$color-graph-fill: var(--graph-fill);
+$color-black: var(--black);
+$color-light-black: var(--light-black);
+$color-gray: var(--gray);
+$color-gray-dark: var(--gray-dark);
+$color-light-gray: var(--light-gray);
+$color-orange: var(--orange);
+$color-radio: $color-blue;
+$color-white: var(--white);
+$color-gray-light: var(--gray-light);
+$color-light-gray-back: var(--light-gray-back);
+$color-dark-gray-back: var(--dark-gray-back);
+$color-light-background: var(--light-background);
+$color-blue-light: var(--blue-light);
+$color-blue-border: #a6d8ff;
+$color-button: var(--blue);
+$color-pink: var(--pink);
+$header-color: #FFCB05;
+$color-background-box: #fff;
+$color-box-heading: #474747;
+$color-box-label: #9b9b9b;
+//table
+$color-table-hover: #f4f9fe; // rgba(166, 216, 255, 0.3);
+$color-table-heading: #979797;
+$color-table-data: #4a4a4a;
+// font names
+$productsans-regular: "ProductSans-Regular";
+$productsans-light: "ProductSans-Light";
+$productsans-bold: "ProductSans-Bold";
+$productsans-medium: "ProductSans-Medium";
+$heading-font-color: #9b9b9b; // #9b9b9b;
+
+
+$sidebar-bg-color: white;
+
+//items
+$sidebar-item-color: #9ea0a5;
+$sidebar-heading-color: #4a4a4a;
+$sidebar-icon-color: $color-blue;
+$sidebar-hover-color: rgba(166, 216, 255, 0.29);
+$sidebar-font-size: 14px;
+
+//search
+$sidebar-search-bg-color: #ececec94;
+$sidebar-search-font-color: #9b9b9b;
+
+
+$header-height: 70px;
+:root {
+  --blue: #FFCB05;
+  --black: #DB580B;
+  --red: Red;
+  --gray: #e2e4e6;
+  --gray-dark: #979797;
+  --gray-light: #585858;
+  --light-gray: #d3d3d3;
+  --orange: #ff8f00;
+  --white: #ffffff;
+  --light-black: #282828;
+  --sidebar-black: #1c1c1c;
+  --sidebar-hover-black: #282828;
+  --light-gray-back: #f7f7f7;
+  --dark-gray-back: #ecebeb;
+  --graph-label: #2296ff;
+  --graph-fill: #e0a7a7;
+  --light-background: #f9f9f9;
+  --blue-light: #f4f6f8;
+  --pink: #f7b8ae;
+  --old: #FFCB05;
+}

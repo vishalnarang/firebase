@@ -1,0 +1,32 @@
+@import '../../../../../assets/css/variables.scss';
+@import '../../../../../assets/css/fancy-form.scss';
+
+label{
+    font-family: $productsans-regular;
+}
+
+::ng-deep .iti{
+    width: 100% !important;
+}
+
+.button-color{
+    color: #ffffff;
+    background-color:#DB580B !important;
+    font-family: $productsans-regular !important;
+    border-color:#DB580B !important; 
+}
+
+.margin-left{
+    margin-left: 20px;
+}
+
+.error-msg{
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: red;
+    font-family: $productsans-regular !important;
+}

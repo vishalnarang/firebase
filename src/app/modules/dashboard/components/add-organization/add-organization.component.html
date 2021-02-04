@@ -1,0 +1,109 @@
+<app-popup header="Add Organization" [modalType]="modalType.LARGE">
+    <div body>
+        <form [formGroup]="addOrganizationForm" autocomplete="false" class="row">
+            <div class="from-group col-sm-6">
+                <label>Organization Name</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Enter organization name">
+            </div>
+            <div class="from-group col-6">
+                <label>Organization Link</label>
+                <input type="text" class="form-control" formControlName="link" placeholder="Enter organization link">
+            </div>
+            <div class="from-group col-6">
+                <label>Address</label>
+                <input type="text" class="form-control" formControlName="address" placeholder="Enter address">
+            </div>
+            <div class="from-group col-6">
+                <label>Donate Link</label>
+                <input type="text" class="form-control" formControlName="donateLink" placeholder="Enter donate link">
+            </div>
+
+            <div class="from-group col-6">
+                <label>Email</label>
+                <input type="text" class="form-control" formControlName="email" placeholder="Enter email">
+            </div>
+
+            <div class="from-group col-6">
+                <label>Phone no</label>
+                <ngx-intl-tel-input [cssClass]="'form-control'" [preferredCountries]="preferredCountries"
+                    [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                    [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India" [maxLength]="15"
+                    [phoneValidation]="true" [separateDialCode]="separateDialCode"
+                    [numberFormat]="PhoneNumberFormat.National" name="phone" formControlName="phone">
+                </ngx-intl-tel-input>
+            </div>
+
+            <div class="from-group col-6">
+                <label class="col-12">Category</label>
+                <!-- <p-dropdown [options]="categoryList" [style]="{'width': '100%'}" formControlName="categoryId"
+                    placeholder="select Category" optionLabel="categoryName">
+                </p-dropdown> -->
+                <select formControlName="categoryId" name="categoryId"
+                    style="border: none; border-bottom: 1px solid #ddd !important;" class="form-control">
+                    <option value="">Select Serviceable Region</option>
+                    <option *ngFor="let product of categoryList" [value]="product.categoryId">
+                        {{product.categoryName}}
+                    </option>
+                </select>
+            </div>
+
+            <div class="from-group col-6">
+                <label class="col-12">Twitter</label>
+                <input type="text" class="form-control" formControlName="twitter" placeholder="Enter twitter">
+            </div>
+
+            <div class="from-group col-6">
+                <label class="col-12">Youtube</label>
+                <input type="text" class="form-control" formControlName="youtube" placeholder="Enter youtube">
+            </div>
+
+            <div class="from-group col-6">
+                <label class="col-12">Facebook</label>
+                <input type="text" class="form-control" formControlName="facebook" placeholder="Enter facebook">
+            </div>
+
+            <div class="from-group col-6">
+                <label class="col-12">Instagram</label>
+                <input type="text" class="form-control" formControlName="instagram" placeholder="Enter instagram">
+            </div>
+
+            <div class="from-group col-6">
+                <label class="col-12">Verified</label>
+                <p-inputSwitch formControlName="isVerified"></p-inputSwitch>
+            </div>
+
+            <div class="from-group col-6">
+                <label class="col-12">Awarded</label>
+                <p-inputSwitch formControlName="isAwarded"></p-inputSwitch>
+            </div>
+
+            <div class="from-group col-12" *ngIf="addOrganizationForm['controls'].isAwarded.value">
+                <label class="col-12">Awarded Description</label>
+                <textarea rows="3" formControlName="awardedDescription" class="form-control"
+                    placeholder="Enter awarded description"></textarea>
+            </div>
+
+            <div class="from-group col-12">
+                <label class="col-12">Short Description</label>
+                <textarea rows="3" formControlName="shortDescription" class="form-control"
+                    placeholder="Enter short description"></textarea>
+            </div>
+
+            <div class="from-group col-12">
+                <label class="col-12">Long Description</label>
+                <textarea rows="5" formControlName="longDescription" class="form-control"
+                    placeholder="Enter long description"></textarea>
+            </div>
+
+            <div class="from-group col-12 error-msg" *ngIf="showError">
+                <p>{{errorMsg}}</p>
+            </div>
+        </form>
+    </div>
+    <div footer>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary button-color" (click)="close()">Cancel</button>
+            <button class="btn btn-primary button-color margin-left" (click)="saveData()">Save</button>
+        </div>
+    </div>
+</app-popup>

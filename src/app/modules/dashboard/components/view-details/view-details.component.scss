@@ -1,0 +1,26 @@
+@import '../../../../../assets/css/variables.scss';
+@import '../../../../../assets/css/fancy-form.scss';
+
+label.heading-l2 {
+    font-size: 14px;
+    font-family: $productsans-regular;
+    color: $color-box-label;
+    display: block;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    .bold {
+      color: $heading-font-color;
+    }
+  }
+
+.button-color{
+    color: #ffffff;
+    background-color: #DB580B !important;
+    font-family: $productsans-regular !important;
+    border-color: #DB580B !important; 
+}
+
+p{
+    text-align: justify;
+    word-break: break-word;
+}
